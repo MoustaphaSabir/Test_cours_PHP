@@ -1,0 +1,63 @@
+<!-- Page qui affiche le formulaire HTML -->
+<!-- Champs : nom, email , telephone , message -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        form{
+            width: 100%;
+            height: 100%;
+            outline: solid #1a1818;
+        }
+    </style>
+    <title>Formulaire</title>
+</head>
+<body>
+     <h1>Formulaire Client</h1>
+     <form action="formulaireDonneesClients.php" method="post">
+       <div> 
+            <label for="nom">Nom :</label>
+            <input type="text" name="nom" id="nom">
+        </div>
+        <br>
+        <div> 
+            <label for="prenom">Prénom:</label>
+            <input type="text" name="prenom" id="prenom">
+        </div>
+        <br>
+        <div>
+            <label for="date">Date de naissance:</label>
+            <input type="date" name="date" id="date">
+        </div>
+        <br>
+        <div> 
+            <label for="email">E-mail:</label>
+            <input type="email" name="email" id="email">
+        </div>
+        <br>
+        <div>
+            <label for="abon">Abonnement Newsletter* :</label>
+            <label for="abon">Oui</label>
+            <input type="radio" name="abon" value="Oui" required>
+            <label for="abon">Non</label>
+            <input type="radio" name="abon" value="Non">
+        </div>
+        <br>
+        <div>
+            <label for="produits">Selectionner un Produit</label>
+            <select name="produits[]" id="produits" multiple>
+                <option value="telephone">Pulls</option>
+                <option value="mail">Pantalons</option>
+                <option value="jups">Jups</option>
+                <option value="chemise">Chemise</option>
+                <option value="polo">Polo</option>
+            </select>
+        </div>
+        <br>
+            <input type="submit" value="Envoyer le message">
+     </form>
+</body>
+</html>
